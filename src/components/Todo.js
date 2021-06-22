@@ -134,12 +134,12 @@ const Todo = (props) => {
         <h1>Todo</h1>
         <button onClick={props.toggleColorModeHandle}>
           <img
-            style={props.colorMode ? { opacity: 1 } : null}
+            style={!props.colorMode ? { opacity: 1 } : null}
             src="./images/icon-sun.svg"
             alt="iconmoon"
           />
           <img
-            style={!props.colorMode ? { opacity: 1 } : null}
+            style={props.colorMode ? { opacity: 1 } : null}
             src="./images/icon-moon.svg"
             alt="iconmoon"
           />
