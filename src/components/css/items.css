@@ -60,7 +60,7 @@
   color: #cacde8;
   -webkit-transition: color 200ms ease;
   transition: color 200ms ease;
-  cursor: pointer;
+  pointer-events: none;
 }
 
 .item__container__left button.light {
@@ -122,17 +122,16 @@
 }
 
 .item__container__right {
-  visibility: hidden;
-  -webkit-transition: 200ms ease;
-  transition: 200ms ease;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .item__container__right > button {
+  background: transparent;
   position: relative;
   width: 25px;
   height: 25px;
   border: none;
-  background: transparent;
   cursor: pointer;
 }
 

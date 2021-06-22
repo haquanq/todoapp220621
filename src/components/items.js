@@ -3,9 +3,14 @@ import "./css/items.css";
 
 const Items = (props) => {
   const [buttonState, setButtonState] = useState(false);
-  const deleteItemButtonHandle = (e) => {
-    setButtonState((x) => !x);
+  const MouseIn = (e) => {
+    setButtonState(true);
   };
+
+  const MouseOut = (e) => {
+    setButtonState(false);
+  };
+
   const itemRef = useRef();
 
   useEffect(() => {
@@ -19,6 +24,8 @@ const Items = (props) => {
 
   return (
     <div
+      onMouseOver={MouseIn}
+      onMouseLeave={MouseOut}
       ref={itemRef}
       className={props.colorMode ? "item__container light" : "item__container"}
       style={{
@@ -49,7 +56,6 @@ const Items = (props) => {
           </div>
         </button>
         <p
-          onClick={deleteItemButtonHandle}
           className={props.colorMode ? "light" : null}
           style={
             props.completed
@@ -61,7 +67,9 @@ const Items = (props) => {
         </p>
       </div>
       <div
-        style={buttonState === true ? { visibility: "initial" } : null}
+        style={
+          buttonState === true ? { opacity: 1, pointerEvents: "initial" } : null
+        }
         className="item__container__right"
       >
         <button

@@ -128,7 +128,24 @@
   }
 }
 
+#description {
+  opacity: 0.8;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 45px;
+  font-size: 0.777em;
+  color: col($darkT, Dark_Grayish_Blue);
+}
+
+#description.light {
+  color: col($lightT, Very_Dark_Grayish_Blue);
+}
+
 @media screen and (max-width: 600px) {
+  #description {
+    font-size: 0.688em;
+    margin-top: 100px;
+  }
   .todo__contain {
     margin: 45px 0 50px 0;
     &__head {

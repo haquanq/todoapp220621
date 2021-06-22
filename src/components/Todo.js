@@ -237,6 +237,9 @@ const Todo = (props) => {
           deleteItem={deleteItem}
         />
       </div>
+      <p className={props.colorMode ? "light" : null} id="description">
+        Drag and drop to reorder list
+      </p>
     </div>
   );
 };
