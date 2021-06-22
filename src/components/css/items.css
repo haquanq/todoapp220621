@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  font-family: "Josefin sans", sans-serif;
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.item__container:nth-child(1) {
+  border-radius: 5px 5px 0 0;
+}
+
+.item__container {
+  overflow: hidden;
+  border-bottom: 1px solid #393a4c;
+  background: #25273c;
+  width: 100%;
+  height: 65px;
+  padding: 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.item__container.light {
+  border-bottom: 1px solid #d2d3db;
+  background: #fafafa;
+}
+
+.item__container__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item__container__left p.light {
+  color: #484b6a;
+}
+
+.item__container__left p {
+  margin-top: 4px;
+  font-weight: 400;
+  margin-left: 25px;
+  font-size: 0.944em;
+  color: #cacde8;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  cursor: pointer;
+}
+
+.item__container__left button.light {
+  border: 1px solid #d2d3db;
+}
+
+.item__container__left button {
+  -webkit-transition: border 250ms ease;
+  transition: border 250ms ease;
+  border-radius: 100%;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #393a4c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  background: transparent;
+}
+
+.item__container__left button > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: linear-gradient(125deg, #57ddff, #c058f3);
+}
+
+.item__container__left button > div img {
+  margin-top: 1px;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.item__container__right {
+  visibility: hidden;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.item__container__right > button {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.item__container__right > button span {
+  position: absolute;
+  border-radius: 5px;
+  background: #777a92;
+  width: 25px;
+  height: 2px;
+  pointer-events: none;
+  left: 0px;
+  top: 12px;
+}
+
+.item__container__right > button > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.item__container__right > button > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.item__container__right > button.light span {
+  background: #9394a5;
+}
+
+@media (hover: hover) {
+  .item__container__left button:hover {
+    border: 1px solid #3a7bfd;
+  }
+  .item__container__right > button:hover > span {
+    background: #3a7bfd;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item__container {
+    height: 48px;
+    padding: 0 20px;
+  }
+  .item__container__left button {
+    width: 20px;
+    height: 20px;
+  }
+  .item__container__left button img {
+    width: 8px;
+  }
+  .item__container__left p {
+    margin-left: 12px;
+    font-size: 0.611em;
+  }
+  .item__container__right > button {
+    width: 20px;
+    height: 20px;
+  }
+  .item__container__right > button span {
+    border-radius: none;
+    width: 20px;
+    height: 1px;
+    left: 0px;
+    top: 8px;
+  }
+}
+/*# sourceMappingURL=items.css.map */

@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import "./variable";
+
+* {
+  font-family: "Josefin sans", sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.todo__contain {
+  margin: 80px 0 50px 0;
+  max-width: 540px;
+  min-width: 320px;
+  width: 90%;
+  color: white;
+  position: relative;
+  z-index: 3;
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    > h1 {
+      letter-spacing: 10px;
+      font-weight: 700;
+      font-size: 1.888em;
+      text-transform: uppercase;
+    }
+    button {
+      position: relative;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border: none;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > img {
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 150ms ease;
+        object-position: center center;
+        object-fit: contain;
+      }
+      > img:first-child {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      > img:last-child {
+        width: 85%;
+        height: 85%;
+      }
+    }
+    > button:active > img {
+      transform: scale(0.8);
+    }
+  }
+  &__input {
+    margin: 40px 0 25px 0;
+    width: 100%;
+    button {
+      display: none;
+    }
+    input {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 19px 50px,
+        rgba(0, 0, 0, 0.1) 0px 15px 12px;
+      padding: 5px 25px 0 25px;
+      border-radius: 5px;
+      border: none;
+      background: col($darkT, Very_Dark_Desaturated_Blue);
+      height: 65px;
+      width: 100%;
+      color: col($darkT, Light_Grayish_Blue);
+      font-size: 1em;
+      transition: 200ms ease;
+    }
+    input.light {
+      background: col($lightT, Very_Light_Gray);
+      color: col($lightT, Very_Dark_Grayish_Blue);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 19px 50px,
+        rgba(0, 0, 0, 0.1) 0px 15px 12px;
+    }
+    ::placeholder {
+      font-size: 0.888em;
+      color: col($darkT, Dark_Grayish_Blue);
+    }
+  }
+  &__list {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 50px,
+      rgba(0, 0, 0, 0.2) 0px 15px 12px;
+    border-radius: 5px;
+    background: col($darkT, Very_Dark_Desaturated_Blue);
+    width: 100%;
+    transition: 200ms ease;
+    position: relative;
+    z-index: 5;
+    .item__container:nth-child(2) {
+      border-radius: 5px 5px 0 0;
+    }
+  }
+  &__list.light {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 50px,
+      rgba(0, 0, 0, 0.2) 0px 5px 30px;
+    color: col($lightT, Very_Dark_Grayish_Blue);
+    background: col($lightT, Very_Light_Gray);
+  }
+}
+
+.item__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 65px;
+  p em {
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+    font-size: 0.777em;
+    color: col($darkT, Dark_Grayish_Blue);
+  }
+  em.light {
+    color: col($lightT, Very_Dark_Grayish_Blue);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .todo__contain {
+    margin: 45px 0 50px 0;
+    &__head {
+      h1 {
+        font-size: 1.33em;
+        line-height: 1.2;
+      }
+      button {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    &__list {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+        rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
+    }
+    &__input {
+      margin: 35px 0 15px 0;
+      input {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+          rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
+        padding: 4px 20px 0 20px;
+        height: 48px;
+        font-size: 0.722em;
+      }
+    }
+  }
+}

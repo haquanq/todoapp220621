@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.list__footer {
+  position: relative;
+  margin-top: -1px;
+  border-top: 1px solid #4d5066;
+  padding: 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.list__footer > p {
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  font-size: 0.777em;
+  color: #777a92;
+}
+
+.list__footer > p.light {
+  color: #9394a5;
+}
+
+.list__footer.light {
+  border-top: 1px solid #d2d3db;
+}
+
+.list__footer__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list__footer__filter > div label:nth-child(2) {
+  margin: 0 20px;
+}
+
+.list__footer__filter > div label.light {
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  color: #9394a5;
+}
+
+.list__footer__filter > div label {
+  color: #777a92;
+  font-weight: 700;
+  font-size: 0.777em;
+  -webkit-transition: 150ms ease;
+  transition: 150ms ease;
+  cursor: pointer;
+}
+
+.list__footer__filter > div label input {
+  display: none;
+}
+
+.list__footer__filter button.light {
+  color: #9394a5;
+}
+
+.list__footer__filter button {
+  margin-left: 60px;
+  color: #777a92;
+  font-size: 0.777em;
+  background: transparent;
+  -webkit-transition: 150ms ease;
+  transition: 150ms ease;
+  border: none;
+  cursor: pointer;
+}
+
+.list__footer__filter.default label:nth-child(1) {
+  color: #3a7bfd;
+  pointer-events: none;
+}
+
+.list__footer__filter.true label:nth-child(2) {
+  color: #3a7bfd;
+  pointer-events: none;
+}
+
+.list__footer__filter.false label:nth-child(3) {
+  color: #3a7bfd;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .list__footer__filter label.light:hover {
+    color: #484b6a;
+  }
+  .list__footer__filter button.light:hover {
+    color: #484b6a;
+  }
+  .list__footer__filter label:hover {
+    color: #e4e5f1;
+  }
+  .list__footer__filter button:hover {
+    color: #e4e5f1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .list__footer p {
+    font-size: 0.666em;
+  }
+  .list__footer button {
+    font-size: 0.666em;
+  }
+  .list__footer__filter > div {
+    -webkit-transition: 200ms ease;
+    transition: 200ms ease;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 25px, rgba(0, 0, 0, 0.2) 0px 10px 30px !important;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 25px, rgba(0, 0, 0, 0.2) 0px 10px 30px !important;
+    border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: 65px;
+    background: #25273c;
+  }
+  .list__footer__filter > div > label {
+    font-size: 0.722em;
+  }
+  .list__footer__filter > div > label:nth-child(2) {
+    margin: 0 30px;
+  }
+  .list__footer__filter > div.light {
+    background: #fafafa;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
