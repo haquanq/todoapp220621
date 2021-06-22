@@ -63,11 +63,11 @@
   pointer-events: none;
 }
 
-.item__container__left button.light {
+.item__container__left div.light {
   border: 1px solid #d2d3db;
 }
 
-.item__container__left button {
+.item__container__left div {
   position: relative;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
@@ -89,7 +89,7 @@
   background: transparent;
 }
 
-.item__container__left button > div {
+.item__container__left div > span {
   top: 0;
   bottom: 0;
   left: 0;
@@ -113,7 +113,7 @@
   background: linear-gradient(125deg, #57ddff, #c058f3);
 }
 
-.item__container__left button > div img {
+.item__container__left div > span img {
   margin-top: 1px;
   -webkit-transition: 250ms ease;
   transition: 250ms ease;
@@ -126,16 +126,15 @@
   pointer-events: none;
 }
 
-.item__container__right > button {
-  background: transparent;
+.item__container__right > div {
   position: relative;
   width: 25px;
   height: 25px;
-  border: none;
   cursor: pointer;
+  background: chartreuse;
 }
 
-.item__container__right > button span {
+.item__container__right > div span {
   position: absolute;
   border-radius: 5px;
   background: #777a92;
@@ -146,25 +145,25 @@
   top: 12px;
 }
 
-.item__container__right > button > span:first-child {
+.item__container__right > div > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.item__container__right > button > span:last-child {
+.item__container__right > div > span:last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.item__container__right > button.light span {
+.item__container__right > div.light span {
   background: #9394a5;
 }
 
 @media (hover: hover) {
-  .item__container__left button:hover {
+  .item__container__left div:hover {
     border: 1px solid #3a7bfd;
   }
-  .item__container__right > button:hover > span {
+  .item__container__right div:hover > span {
     background: #3a7bfd;
   }
 }
@@ -174,22 +173,22 @@
     height: 48px;
     padding: 0 20px;
   }
-  .item__container__left button {
+  .item__container__left div {
     width: 20px;
     height: 20px;
   }
-  .item__container__left button img {
+  .item__container__left div img {
     width: 8px;
   }
   .item__container__left p {
     margin-left: 12px;
     font-size: 0.611em;
   }
-  .item__container__right > button {
+  .item__container__right > div {
     width: 20px;
     height: 20px;
   }
-  .item__container__right > button span {
+  .item__container__right > div span {
     border-radius: none;
     width: 20px;
     height: 1px;

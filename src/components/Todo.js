@@ -60,24 +60,21 @@ const Todo = (props) => {
 
   // DELETE ITEM OR CLEAR ALL COMPLETED ITEM
   const deleteItem = (e) => {
-    if (e.target.name === "deleteitem") {
-      setItem(
-        item.filter(
-          (element, index) =>
-            index !== JSON.parse(e.target.getAttribute("index"))
-        )
-      );
-      setCopyItem(
-        item.filter(
-          (element, index) =>
-            index !== JSON.parse(e.target.getAttribute("index"))
-        )
-      );
-    }
-    if (e.target.name === "clearcompleted") {
-      setItem(item.filter((element, index) => element.completed !== true));
-      setCopyItem(item.filter((element, index) => element.completed !== true));
-    }
+    setItem(
+      item.filter(
+        (element, index) => index !== JSON.parse(e.target.getAttribute("index"))
+      )
+    );
+    setCopyItem(
+      item.filter(
+        (element, index) => index !== JSON.parse(e.target.getAttribute("index"))
+      )
+    );
+  };
+
+  const clearCompletedItem = (e) => {
+    setItem(item.filter((element, index) => element.completed !== true));
+    setCopyItem(item.filter((element, index) => element.completed !== true));
   };
 
   // TOGGLE COMPLETE ITEM
@@ -228,6 +225,7 @@ const Todo = (props) => {
         </div>
         <Footer
           colorMode={props.colorMode}
+          clearCompletedItem={clearCompletedItem}
           initialItemIndexHandle={initialItemIndexHandle}
           setFalseFirst={setFalseFirst}
           setTrueFirst={setTrueFirst}

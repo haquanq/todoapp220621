@@ -47,8 +47,7 @@ const Footer = (props) => {
         </div>
         <button
           className={props.colorMode ? "light" : null}
-          onClick={props.deleteItem}
-          name="clearcompleted"
+          onClick={props.clearCompletedItem}
         >
           Clear Completed
         </button>

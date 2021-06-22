@@ -24,7 +24,7 @@ const Items = (props) => {
 
   return (
     <div
-      onMouseOver={MouseIn}
+      onMouseMove={MouseIn}
       onMouseLeave={MouseOut}
       ref={itemRef}
       className={props.colorMode ? "item__container light" : "item__container"}
@@ -42,19 +42,19 @@ const Items = (props) => {
       }}
     >
       <div className="item__container__left">
-        <button
+        <div
           className={props.colorMode ? "light" : null}
           index={props.index}
           onClick={props.completeItemHandle}
         >
-          <div
+          <span
             style={{
               transform: props.completed ? "initial" : null,
             }}
           >
             <img src="./images/icon-check.svg" alt="iconcheck" />
-          </div>
-        </button>
+          </span>
+        </div>
         <p
           className={props.colorMode ? "light" : null}
           style={
@@ -72,15 +72,14 @@ const Items = (props) => {
         }
         className="item__container__right"
       >
-        <button
+        <div
           className={props.colorMode ? "light" : null}
-          name="deleteitem"
           index={props.index}
           onClick={props.deleteItem}
         >
           <span></span>
           <span></span>
-        </button>
+        </div>
       </div>
     </div>
   );
