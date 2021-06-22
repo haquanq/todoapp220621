@@ -62,12 +62,12 @@ const Todo = (props) => {
   const deleteItem = (e) => {
     setItem(
       item.filter(
-        (element, index) => index !== JSON.parse(e.target.getAttribute("index"))
+        (element, index) => index !== JSON.parse(e.target.getAttribute("title"))
       )
     );
     setCopyItem(
       item.filter(
-        (element, index) => index !== JSON.parse(e.target.getAttribute("index"))
+        (element, index) => index !== JSON.parse(e.target.getAttribute("title"))
       )
     );
   };
@@ -79,7 +79,7 @@ const Todo = (props) => {
 
   // TOGGLE COMPLETE ITEM
   const completeItemHandle = (e) => {
-    const index = e.target.getAttribute("index");
+    const index = e.target.getAttribute("title");
     let newItem = [...item];
 
     e.target.firstChild.style.transition = "200ms ease";

@@ -44,7 +44,7 @@ const Items = (props) => {
       <div className="item__container__left">
         <div
           className={props.colorMode ? "light" : null}
-          index={props.index}
+          title={props.index}
           onClick={props.completeItemHandle}
         >
           <span
@@ -74,7 +74,7 @@ const Items = (props) => {
       >
         <div
           className={props.colorMode ? "light" : null}
-          index={props.index}
+          title={props.index}
           onClick={props.deleteItem}
         >
           <span></span>
