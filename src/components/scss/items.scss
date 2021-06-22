@@ -52,6 +52,7 @@
     border: 1px solid col($lightT, Light_Grayish_Blue);
   }
   button {
+    position: relative;
     transition: border 250ms ease;
     border-radius: 100%;
     display: block;
@@ -64,6 +65,11 @@
     cursor: pointer;
     background: transparent;
     > div {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
       display: flex;
       align-items: center;
       justify-content: center;
